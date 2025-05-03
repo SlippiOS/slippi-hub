@@ -1,10 +1,27 @@
 {
-  "$schema": "../gen/schemas/desktop-schema.json",
-  "identifier": "default",
-  "description": "Capability for the main window",
-  "windows": ["main"],
-  "permissions": [
-    "core:default",
-    "opener:default"
-  ]
+	"$schema": "../gen/schemas/desktop-schema.json",
+	"identifier": "default",
+	"description": "Capability for the main window",
+	"windows": [
+		"main"
+	],
+	"permissions": [
+		"core:default",
+		"fs:default",
+		"fs:allow-appdata-read",
+		"opener:allow-open-path",
+		{
+			"identifier": "shell:allow-execute",
+			"allow": [
+				{
+					"name": "run-slippi",
+					"cmd": "/home/rwendell/.config/Slippi Launcher/netplay/Slippi_Online-x86_64.AppImage",
+					"args": [
+						"-e",
+						"/home/rwendell/roms/gcn/Super Smash Bros. Melee (USA) (En,Ja) (v1.02).iso"
+					]
+				}
+			]
+		}
+	]
 }

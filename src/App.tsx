@@ -1,11 +1,28 @@
+import { createSignal, Show } from "solid-js";
 import "./App.css";
 import SimpleOpener from "./SimpleOpener";
+import FolderOpener from "./FolderSelector";
 
-function App() {
+interface appProps {
+  settings: {
+    iso: string;
+    isoFolder: string;
+    slippiDirectory: string;
+  };
+}
+
+function App(props: appProps) {
+  const [selectedISO, setSelectedISO] = createSignal(
+    props?.settings?.iso || "",
+  );
   return (
     <main>
-      <input placeholder="melee-iso"></input>
-      <input placeholder="dolphin executable"></input>
+      <p>currently selected ISO:</p>
+      <Show when={selectedISO()} fallback={<p>no iso selected!</p>}>
+        <p>{selectedISO()}</p>
+      </Show>
+      <button>Select ISO</button>
+      <FolderOpener />
       <SimpleOpener />
     </main>
   );

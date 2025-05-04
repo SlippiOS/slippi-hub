@@ -11,7 +11,7 @@ This template should help get you started developing with Tauri, Solid and Types
 - [ ] Update Slippi Dolphin (probably need to do the same call that slippi launcher does)
     - [ ] Maintain own sidecar of slippi-dolphin?
 - [ ] Select ISOs 
-    - [ ] ask user for gamecube isos folder
+    - [x] ask user for gamecube isos folder
     - [ ] store it and allow users to pull it out from settings
 - [ ] Get Slippi Location Programatically
 - [ ] Control Dolphin Settings from UI

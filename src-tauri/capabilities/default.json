@@ -8,6 +8,8 @@
   "permissions": [
     "core:default",
     "fs:default",
+	"fs:allow-config-read-recursive",
+	"fs:allow-read-text-file",
     "fs:allow-appdata-read",
     "opener:allow-open-path",
     {
